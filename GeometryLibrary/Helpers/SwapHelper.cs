@@ -1,4 +1,4 @@
-﻿namespace GeometryLibrary.Helpers;
+﻿namespace Geometry.Library.Helpers;
 
 public static class SwapHelper
 {

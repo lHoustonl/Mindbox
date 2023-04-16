@@ -1,17 +1,17 @@
-﻿using GeometryLibrary.Constants;
-using GeometryLibrary.Helpers;
+﻿using Geometry.Library.Constants;
+using Geometry.Library.Helpers;
 
-namespace GeometryLibrary.Classes;
+namespace Geometry.Library.Classes;
 
 public sealed class Triangle
 {
     private readonly double _accuracy = Accuracy.CalculationAccuracy;
 
-    private readonly double _sideA;
-    private readonly double _sideB;
-    private readonly double _sideC;
-
     private readonly bool _isRightTriangle;
+
+    public readonly double SideA;
+    public readonly double SideB;
+    public readonly double SideC;
 
     public Triangle(double sideA, double sideB, double sideC)
     {
@@ -29,9 +29,9 @@ public sealed class Triangle
         if ((perimeter - maxSide) - maxSide < _accuracy)
             throw new ArgumentException("The sum of two sides must be greater than the third side");
 
-        _sideA = sideA;
-        _sideB = sideB;
-        _sideC = sideC;
+        SideA = sideA;
+        SideB = sideB;
+        SideC = sideC;
 
         _isRightTriangle = IsRightAngled();
     }
@@ -40,16 +40,16 @@ public sealed class Triangle
 
     public double CalculateArea()
     {
-        var halfP = (_sideA + _sideB + _sideC) / 2d;
+        var halfP = (SideA + SideB + SideC) / 2d;
 
-        var area = Math.Sqrt(halfP * (halfP - _sideA) * (halfP - _sideB) * (halfP - _sideC));
+        var area = Math.Sqrt(halfP * (halfP - SideA) * (halfP - SideB) * (halfP - SideC));
 
         return area;
     }
 
     private bool IsRightAngled()
     {
-        double maxSide = _sideA, b = _sideB, c = _sideC;
+        double maxSide = SideA, b = SideB, c = SideC;
         if (b - maxSide > _accuracy)
             SwapHelper.Swap(ref maxSide, ref b);
 

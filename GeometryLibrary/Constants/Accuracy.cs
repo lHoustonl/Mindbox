@@ -1,4 +1,4 @@
-﻿namespace GeometryLibrary.Constants;
+﻿namespace Geometry.Library.Constants;
 
 public static class Accuracy
 {

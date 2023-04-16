@@ -1,4 +1,4 @@
-﻿namespace GeometryLibrary.Interfaces;
+﻿namespace Geometry.Library.Interfaces;
 
 public interface IShape
 {

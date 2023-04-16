@@ -1,6 +1,6 @@
 ﻿using Microsoft.CSharp.RuntimeBinder;
 
-namespace GeometryLibrary.Helpers;
+namespace Geometry.Library.Helpers;
 
 public static class CalculateAreaHelper
 {

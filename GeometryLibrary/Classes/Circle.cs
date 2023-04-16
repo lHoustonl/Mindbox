@@ -1,7 +1,7 @@
-﻿using GeometryLibrary.Constants;
-using GeometryLibrary.Interfaces;
+﻿using Geometry.Library.Constants;
+using Geometry.Library.Interfaces;
 
-namespace GeometryLibrary.Classes;
+namespace Geometry.Library.Classes;
 
 public sealed class Circle : IShape
 {
